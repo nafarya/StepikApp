@@ -38,14 +38,10 @@ class CourseListAdapter(var state: String, val clickListener: (Model.Course, Int
         private val txtTitle = itemView.findViewById<TextView>(R.id.course_item_title)
         val checkbox = itemView.findViewById<CheckBox>(R.id.course_item_check_box)
 
-
         fun setItem(item: Model.Course) {
-            //if (!item.course_cover.isNullOrEmpty()) img.load(item.course_cover)
             img.load(item.course_cover)
             txtTitle.text = item.course_title
             checkbox.isChecked = item.isFeatured
         }
-
     }
-
 }

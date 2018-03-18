@@ -1,5 +1,6 @@
 package com.example.dan.stepikapp.commons
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 /**
@@ -17,10 +18,10 @@ object Model {
             val has_previous: Boolean
     )
 
+
     data class Course(
             val id: Int,
             val position: Int,
-
             val target_id: Int,
             val target_type: String,
             val course: Int,
@@ -28,8 +29,6 @@ object Model {
             val course_title: String,
             val course_slug: String,
             val course_cover: String,
-
             var isFeatured: Boolean
-
     )
 }
