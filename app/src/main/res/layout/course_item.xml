@@ -2,37 +2,59 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/course_item_img"
-        android:layout_width="50dip"
-        android:layout_height="50dip"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:id="@+id/course_item_title"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_search"
-        android:lines="2"
-        android:maxWidth="240dp"
-        app:layout_constraintLeft_toRightOf="@+id/course_item_img" />
+        android:elevation="3dp"
+        android:layout_margin="8dp">
 
-    <CheckBox
-        android:id="@+id/course_item_check_box"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/course_item_img"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/course_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/course_item_img"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@+id/course_item_img"
+                android:layout_toLeftOf="@+id/course_item_check_box"
+                android:lines="3"
+                android:text="@string/title_search" />
+
+            <CheckBox
+                android:id="@+id/course_item_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+
 
 </android.support.constraint.ConstraintLayout>

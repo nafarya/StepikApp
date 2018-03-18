@@ -98,6 +98,8 @@ class MainActivity : AppCompatActivity() {
                         if (adapter.state.equals("featured")) {
                             if (course.isFeatured == true) {
                                 featuredList.remove(course)
+                                adapter.courseList = featuredList
+                                adapter.notifyDataSetChanged()
                                 setFlags(coursesList, featuredList, false)
                             } else {
                                 featuredList.add(course)
